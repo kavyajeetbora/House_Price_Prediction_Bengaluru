@@ -1,5 +1,7 @@
 ## Prediction of house price for Bengaluru city, India using machine learning model
 
+Creating an application that can predict the house price in the bangalore. 
+
 ### Outline
 
 1. Creating a machine learning model from the [dataset]() available on kaggle. 
