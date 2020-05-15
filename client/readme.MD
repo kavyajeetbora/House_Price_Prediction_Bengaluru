@@ -1,4 +1,4 @@
-Contains the code for the user interface for the web application 
+Contains the code for the user interface for the web application which comprises of html file for making basic structure of the application and javascript file to make the application dynamic.
 
 The user interface looks like this - 
 
