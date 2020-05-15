@@ -2,6 +2,8 @@
 
 Steps involved in preparing the model - 
 
+[Jupyter notebook link](House_price_prediction.ipynb)
+
 1. **Data cleaning and exploring**:
 - Handling null values
 - standardizing the values in each columns
