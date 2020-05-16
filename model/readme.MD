@@ -21,6 +21,6 @@ Steps involved in preparing the model -
 - out of all the models, Linear Regression model was giving the best results
 
 4. **Exporting the model**
-- the best model was chosen for prediction and save as python pickle file
-- the data structure was exported as json file.
+- Exporting the best model as python pickle file.
+- Exporting the data structure (column names of the dataset) as json file.
  
