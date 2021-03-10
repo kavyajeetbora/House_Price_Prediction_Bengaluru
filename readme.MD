@@ -10,4 +10,4 @@ Creating an application that can predict the house price in the bangalore.
 
 The final application looks like this - 
 
-![](client/bengaluru_house_price_prediction.gif)
+![](client/ezgif.com-gif-maker.gif)
