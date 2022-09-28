@@ -10,6 +10,4 @@ Creating an application that can predict the house price in the bangalore.
 
 The final application looks like this - 
 
-![](https://raw.githubusercontent.com/kavyajeetbora/House_Price_Prediction_Bengaluru/master/presentation.gif)
-
-[If the image doesnot show up, please follow this link](https://raw.githubusercontent.com/kavyajeetbora/House_Price_Prediction_Bengaluru/master/presentation.gif)
+![presentation](https://user-images.githubusercontent.com/38955297/192730317-06987a3b-3b0a-4710-845d-24ded7ab5228.gif)
