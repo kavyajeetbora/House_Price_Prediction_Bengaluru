@@ -13,12 +13,6 @@ def info():
     return {"Application": "House Price Prediction", "Units": "In Lakhs"}
 
 
-def get_model(path):
-    with open(path, "rb") as pkl_file:
-        model = pickle.load(pkl_file)
-    return model
-
-
 @app.post("/predict")
 def predict(input_data: InputData) -> float:
     model = get_model(MODEL_PATH)

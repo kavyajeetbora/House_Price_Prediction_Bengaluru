@@ -5,14 +5,13 @@ import os
 import json
 import pickle
 
-MODEL_PATH = r"app\artifacts\house_price_prediction_model.pkl"
-METADATA_PATH = r"app\artifacts\columns.json"
+METADATA_PATH = r"model\columns.json"
 
 if os.path.exists(METADATA_PATH):
     with open(METADATA_PATH, "r") as json_file:
         metadata = json.load(json_file)
 
-    COLUMNS = metadata["data_columns"]
+    COLUMNS = metadata["columns"]
 
 else:
     COLUMNS = None
