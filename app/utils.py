@@ -5,7 +5,7 @@ import os
 import json
 import pickle
 
-METADATA_PATH = r"model\columns.json"
+METADATA_PATH = r"app\artifacts\columns.json"
 
 if os.path.exists(METADATA_PATH):
     with open(METADATA_PATH, "r") as json_file:
@@ -32,17 +32,14 @@ def get_model(path):
     return model
 
 
-def process_input(location, total_sqft, bath, bhk):
+def process_input(user_input: InputData):
     try:
-        validated_inputs = InputData(
-            area=location, sqft=total_sqft, num_baths=bath, num_beds=bhk
-        )
 
         x_input = np.zeros(len(COLUMNS))
-        loc_index = list(COLUMNS).index(validated_inputs.area)
-        x_input[0] = validated_inputs.sqft
-        x_input[1] = validated_inputs.num_baths
-        x_input[2] = validated_inputs.num_baths
+        loc_index = list(COLUMNS).index(user_input.area)
+        x_input[0] = user_input.sqft
+        x_input[1] = user_input.num_baths
+        x_input[2] = user_input.num_baths
         x_input[loc_index] = 1
 
         input_data = pd.DataFrame(x_input.reshape(1, -1), columns=COLUMNS, dtype=int)

@@ -1,6 +1,9 @@
 from fastapi import FastAPI
+from fastapi.responses import JSONResponse
+from app.utils import get_model, process_input, InputData
 
 app = FastAPI(title="Bengaluru House Price Prediction")
+MODEL_PATH = r"app\artifacts\model.pkl"
 
 
 @app.get("/")
@@ -13,11 +16,14 @@ def info():
     return {"Application": "House Price Prediction", "Units": "In Lakhs"}
 
 
-@app.post("/predict")
-def predict(input_data: InputData) -> float:
+@app.post("/predict", response_class=JSONResponse)
+def predict(input_data: InputData) -> dict:
+
+    ## Process the user input
+    print(input_data)
+    model_input = process_input(input_data)
     model = get_model(MODEL_PATH)
-    # price = model.predict(
-    #     input_data.area, input_data.sqft, input_data.num_beds, input_data.num_baths
-    # )
-    price = model.predict("Indira Nagar", 1000, 2, 3)
-    return price
+
+    # ## Now make the predictions
+    price = model.predict(model_input)[0]
+    return {"price": price}
