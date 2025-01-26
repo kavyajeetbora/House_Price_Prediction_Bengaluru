@@ -5,7 +5,7 @@ import os
 import json
 import pickle
 
-METADATA_PATH = r"app\artifacts\columns.json"
+METADATA_PATH = os.path.join("app", "artifacts", "columns.json")
 
 if os.path.exists(METADATA_PATH):
     with open(METADATA_PATH, "r") as json_file:

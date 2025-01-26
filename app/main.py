@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from app.utils import get_model, process_input, InputData
+import os
 
 app = FastAPI(title="Bengaluru House Price Prediction")
-MODEL_PATH = r"app\artifacts\model.pkl"
+MODEL_PATH = os.path.join("app", "artifacts", "model.pkl")
 
 
 @app.get("/")
