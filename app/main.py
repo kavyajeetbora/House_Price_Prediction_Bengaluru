@@ -1,17 +1,6 @@
 from fastapi import FastAPI
-import pickle
-from pydantic import BaseModel
 
 app = FastAPI(title="Bengaluru House Price Prediction")
-MODEL_PATH = "app\artifacts\house_price_prediction_model.pickle"
-
-
-# Define the input data model
-class InputData(BaseModel):
-    area: str
-    sqft: int
-    num_beds: int
-    num_baths: int
 
 
 @app.get("/")
