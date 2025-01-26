@@ -2,5 +2,4 @@ pandas
 matplotlib
 seaborn
 scikit-learn
-fastapi
-streamlit
+fastapi[standard]
