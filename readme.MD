@@ -14,6 +14,8 @@ The final application looks like this -
 
 ## FastAPI
 
+<img src='https://upload.wikimedia.org/wikipedia/commons/1/1a/FastAPI_logo.svg' height=100/>
+
 ### FastAPI Overview
 
 **What is FastAPI?**
@@ -42,6 +44,11 @@ or
 ```
 uvicorn app.main:app --port 7751 --reload
 ```
+
+### References
+
+1. [Running FastAPI with Docker Image](https://fastapi.tiangolo.com/deployment/docker/#create-the-fastapi-code)
+2. [Running a Server Manually](https://fastapi.tiangolo.com/deployment/manually/#install-the-server-program)
 
 ## Unit Testing with Pytest
 
