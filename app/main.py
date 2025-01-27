@@ -21,7 +21,6 @@ def info():
 def predict(input_data: InputData) -> dict:
 
     ## Process the user input
-    print(input_data)
     model_input = process_input(input_data)
     model = get_model(MODEL_PATH)
 
