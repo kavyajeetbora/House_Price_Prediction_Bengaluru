@@ -5,6 +5,12 @@ on:
     branches:
       - master
 
+    paths:
+      - "app/**"
+      - "Dockerfile"
+      - "requirements.txt"
+      - "test/**"
+
 jobs:
   build:
     runs-on: ubuntu-latest
