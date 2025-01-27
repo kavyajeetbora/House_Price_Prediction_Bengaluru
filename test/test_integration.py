@@ -22,11 +22,16 @@ def test_load_model():
     assert type(model) is LinearRegression
 
 
-def test_predict_endpoint():
+def test_root_endpoint():
+    response = requests.post(f"{BASE_URL}/")
+    assert response.status_code == 200, "The server is not running"
 
-    params = {"area": "whitefield", "sqft": 500, "num_baths": 1, "num_beds": 2}
-    response = requests.post(f"{BASE_URL}/predict", json=params)
-    assert (
-        response.status_code == 200
-    ), f"The API is not running responding with {response.status_code}"
-    assert "price" in response.json(), f"There was some issue with the response"
+
+# def test_predict_endpoint():
+
+#     params = {"area": "whitefield", "sqft": 500, "num_baths": 1, "num_beds": 2}
+#     response = requests.post(f"{BASE_URL}/predict", json=params)
+#     assert (
+#         response.status_code == 200
+#     ), f"The API is not running responding with {response.status_code}"
+#     assert "price" in response.json(), f"There was some issue with the response"

@@ -22,7 +22,7 @@ env/
 
 # FastAPI
 *.log
-*.json
+# *.json
 *.yaml
 *.yml
 

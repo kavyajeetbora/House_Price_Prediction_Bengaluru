@@ -1,0 +1,57 @@
+{
+  "taskDefinitionArn": "task-definition/house_price_task_defn:1",
+  "containerDefinitions": [
+    {
+      "name": "house_price_prediction",
+      "image": "kavyajeetbora/house_price_image:latest",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "name": "house_price_prediction-7751-tcp",
+          "containerPort": 7751,
+          "hostPort": 7751,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "ulimits": [],
+      "systemControls": []
+    }
+  ],
+  "family": "house_price_task_defn",
+  "taskRoleArn": "XXXXX",
+  "executionRoleArn": "XXXX",
+  "networkMode": "awsvpc",
+  "revision": 1,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": ""
+    },
+    {
+      "name": ""
+    },
+    {
+      "name": ""
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": ["EC2", "FARGATE"],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "1024",
+  "memory": "2048",
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "registeredAt": "2025-01-27T05:20:54.500Z",
+  "registeredBy": "XXXX",
+  "enableFaultInjection": false,
+  "tags": []
+}
