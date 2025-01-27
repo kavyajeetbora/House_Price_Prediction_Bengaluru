@@ -40,15 +40,13 @@ jobs:
     needs: build
 
     steps:
-      - uses: actions/checkout@v3
-        name: Check out code
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - uses: mr-smithers-excellent/docker-build-push@v6
-        name: Build & push Docker image
+      - name: Push Docker Image to Hub
+        uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          image: repo/image
-          tags: v1, latest
-          registry: registry-url.io
-          dockerfile: Dockerfile.ci
+          image: kavyajeetbora/house_price_image
+          registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
