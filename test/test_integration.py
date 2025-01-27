@@ -23,7 +23,7 @@ def test_load_model():
 
 
 def test_root_endpoint():
-    response = requests.post(f"{BASE_URL}/")
+    response = requests.get(f"{BASE_URL}/")
     assert response.status_code == 200, "The server is not running"
 
 
