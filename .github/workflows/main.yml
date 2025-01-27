@@ -25,7 +25,7 @@ jobs:
 
       - name: Run the application
         run: |
-          uvicorn app.main:app --port 7751
+          uvicorn app.main:app --port 7751 &
 
       - name: Run integraion tests
         run: |
