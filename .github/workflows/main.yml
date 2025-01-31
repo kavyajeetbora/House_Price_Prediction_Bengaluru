@@ -10,6 +10,7 @@ on:
       - "Dockerfile"
       - "requirements.txt"
       - "test/**"
+      - ".github/**"
 
 jobs:
   build:
